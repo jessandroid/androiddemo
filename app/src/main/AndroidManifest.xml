@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dengquan.demo">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".score.KidLiveScoreActivity"
+            android:taskAffinity=""
+            >
+
+        </activity>
+
+        <activity
+            android:name=".canvas.CanvasActivity">
+
+        </activity>
+        <activity
+            android:name=".screenshot.ScreenShotActivity"></activity>
+
+        <!--蓝牙-->
+        <activity android:name=".bluetooth.activity.BluetoothActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".view.TestViewActivity"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+
+        <activity
+            android:name=".TestRoute1Activity"></activity>
+
+        <activity
+            android:name=".TestRoute2Activity"></activity>
+
+        <service
+            android:name=".service.BinderService"
+            android:process=".BinderService"
+            />
+
+        <activity
+            android:name=".opengl.SurfaceViewActivity">
+
+        </activity>
+        <activity
+            android:name="com.net.okhttp.rxdemo.RXDemoActivity"></activity>
+
+        <activity android:name=".livedata.LiveDataActivity"></activity>
+        <activity android:name="com.chat.org.jni.HelloActivity"></activity>
+    </application>
+
+    <!-- QUC_ANDROID_SDK模块：联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- QUC_ANDROID_SDK模块：检测网络状态/检测是否联网 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- QUC_ANDROID_SDK模块：获取手机设别标识信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- QUC_ANDROID_SDK模块：下行短信功能权限配置 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- QUC_ANDROID_SDK模块：上行短信功能权限配置 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BIND_JOB_SERVICE" />
+
+    <!--存储权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--自定义权限，关于V5升级-->
+    <permission android:name="kidsmart.app.update.com.qihoo.kidsmart"/>
+    <uses-permission android:name="kidsmart.app.update.com.qihoo.kidsmart"/>
+
+    <!--系统账号权限-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!--蓝牙权限-->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"></uses-feature>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/scoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户评分"
+        android:textSize="16sp">
+
+    </TextView>
+
+    <com.example.dengquan.demo.score.KidLiveRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dp"
+        app:starDistance = "5dp"
+        app:starSize = "40dp"
+        app:starCount = "5"
+        app:starEmpty="@drawable/star_empty"
+        app:starFull="@drawable/star_full"
+        >
+
+    </com.example.dengquan.demo.score.KidLiveRatingBar>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dp">
+
+    </RatingBar>
+
+</LinearLayout>

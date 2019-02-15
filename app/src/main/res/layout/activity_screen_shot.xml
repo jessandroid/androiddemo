@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成绩单"
+                android:textSize="18sp"
+                android:typeface="serif">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片
+1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片
+1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片
+1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片
+1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片
+1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片1、每一次直播答题或者录播答题结束后，生成成绩单，弹窗引导用户打分，点击确认或关闭后弹窗
+2、成绩单包括不同的鼓励模板语言和知识点分析，不同得分情况不同的成绩单模板
+3、点击分享后，自动生成图片，分享图片"
+                android:textSize="18sp"
+                android:typeface="serif">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/qrImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginTop="30.0dp"
+                android:visibility="gone">
+
+            </ImageView>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生成图片"
+        />
+</LinearLayout>

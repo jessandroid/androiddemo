@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable
+        name="KidLiveChoiceItemViewAttr">
+        <attr
+            name="choice_item_view_text" format="string">
+
+        </attr>
+    </declare-styleable>
+
+    <!--自定义的RatingBar属性-->
+    <declare-styleable
+        name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension"></attr>
+        <!--星星大小-->
+        <attr name="starSize" format="dimension"></attr>
+        <!--星星个数-->
+        <attr name="starCount" format="integer"></attr>
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference"></attr>
+        <!--星星满图-->
+        <attr name="starFull" format="reference"></attr>
+    </declare-styleable>
+</resources>

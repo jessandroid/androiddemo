@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180.0dp"
+    android:background="#f3f3f3"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_weight="0"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="25.0dp"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E6E6E6"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="25.0dp"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/img_qr_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="20.0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/img_qr_bitmap"
+            android:layout_marginLeft="15.0dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/change_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AAAAA"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dp"
+                android:text="BBBBB"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="18.0dp"
+        android:layout_marginTop="10.0dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25.0dp"
+            android:text="refresh"
+            android:paddingRight="25.0dp"
+            android:textSize="13sp">
+
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

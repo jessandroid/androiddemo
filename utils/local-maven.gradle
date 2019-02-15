@@ -1,0 +1,52 @@
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+def artifactVersion = '1.0.2001'//发布的版本
+
+publishing {
+    publications {
+        mainJava(MavenPublication) {
+            groupId = 'lsw.widget'
+            artifactId project.name
+            version = artifactVersion
+            from components.java
+
+        }
+    }
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+
+artifactory {
+    contextUrl = "http://localhost:8081/artifactory"//本地仓库地址
+    publish {
+        repository {
+            /**
+             repoKey:指定发布到的仓库名称
+             */
+            //这里判断了当前发布的版本是不是‘快照’版本；
+            //其中'libs-snapshot-local' : 'libs-release-local'是两个仓库名称
+            repoKey = artifactVersion.endsWith('SNAPSHOT') ?
+                    'lib-aar' : 'lib-aar'
+            username = "admin" // 发布者用户名
+            password = "password" // 发布者密码
+            maven = true
+        }
+        defaults {
+            publishArtifacts = true
+            //这里的'aar'对应publishing任务中的'aar',任务名称可自定义
+            publications('mainJava')
+            publishPom = true //Publish generated POM files to Artifactory (true by default)
+            publishIvy = false //Publish generated Ivy descriptor files to Artifactory (true by default)
+        }
+    }
+    resolve {
+        repository {
+            repoKey = 'jcenter'
+            username = "admin" // 发布者用户名
+            password = "password" // 发布者密码
+        }
+    }
+}
